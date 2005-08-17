@@ -17,6 +17,7 @@ BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXmu
 BuildRoot:	%{tmpdir}/libXmu-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -35,6 +36,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXmu = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXt-devel
+Obsoletes:	libXmu-devel
 
 %description devel
 X Miscellaneous Utilities library.
@@ -54,6 +56,7 @@ Summary:	Static libXmu libraries
 Summary(pl):	Biblioteki statyczne libXmu
 Group:		Development/Libraries
 Requires:	xorg-lib-libXmu-devel = %{version}-%{release}
+Obsoletes:	libXmu-static
 
 %description static
 X Miscellaneous Utilities library.
