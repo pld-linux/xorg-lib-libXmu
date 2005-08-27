@@ -1,5 +1,3 @@
-
-#
 Summary:	X Miscellaneous Utilities library
 Summary(pl):	Biblioteka ró¿nych funkcji u¿ytkowych X
 Name:		xorg-lib-libXmu
@@ -12,13 +10,13 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXmu-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXmu
-BuildRoot:	%{tmpdir}/libXmu-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -28,12 +26,11 @@ X Miscellaneous Utilities library.
 %description -l pl
 Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
 
-
 %package devel
 Summary:	Header files libXmu development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXmu
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXmu = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXt-devel
 Obsoletes:	libXmu-devel
@@ -50,12 +47,11 @@ Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXmu.
 
-
 %package static
 Summary:	Static libXmu libraries
 Summary(pl):	Biblioteki statyczne libXmu
-Group:		Development/Libraries
-Requires:	xorg-lib-libXmu-devel = %{version}-%{release}
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXmu-static
 
 %description static
@@ -68,10 +64,8 @@ Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
 
 Pakiet zawiera statyczn± bibliotekê libXmu.
 
-
 %prep
 %setup -q -n libXmu-%{version}
-
 
 %build
 %{__libtoolize}
@@ -98,16 +92,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%attr(755,root,wheel) %{_libdir}/libXm*.so.*
-
+%attr(755,root,root) %{_libdir}/libXm*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/Xmu/*.h
+%attr(755,root,root) %{_libdir}/libXm*.so
 %{_libdir}/libXm*.la
-%attr(755,root,wheel) %{_libdir}/libXm*.so
+%{_includedir}/X11/Xmu/*.h
 %{_pkgconfigdir}/xm*.pc
-
 
 %files static
 %defattr(644,root,root,755)
