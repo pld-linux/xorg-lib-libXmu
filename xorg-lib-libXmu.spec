@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXmu
 BuildRoot:	%{tmpdir}/libXmu-%{version}-root-%(id -u -n)
