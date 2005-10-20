@@ -100,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libXmuu.so
 %{_libdir}/libXmu.la
 %{_libdir}/libXmuu.la
+%dir %{_includedir}/X11/Xmu
 %{_includedir}/X11/Xmu/*.h
 %{_pkgconfigdir}/xm*.pc
 
