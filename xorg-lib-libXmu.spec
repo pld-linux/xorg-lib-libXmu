@@ -1,19 +1,20 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl):	Biblioteka ró¿nych funkcji u¿ytkowych X
 Name:		xorg-lib-libXmu
-Version:	0.99.0
-Release:	0.03
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	9a4b28aa9c9f27351e9fa53cde344592
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXmu-%{version}.tar.bz2
+# Source0-md5:	08417e7520c931d1a8e6d0fd13898d92
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
+BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXmu
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -89,16 +90,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
-%attr(755,root,root) %{_libdir}/libXm*.so.*.*.*
+%doc COPYING ChangeLog README
+%attr(755,root,root) %{_libdir}/libXmu.so.*.*.*
+%attr(755,root,root) %{_libdir}/libXmuu.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libXm*.so
-%{_libdir}/libXm*.la
+%attr(755,root,root) %{_libdir}/libXmu.so
+%attr(755,root,root) %{_libdir}/libXmuu.so
+%{_libdir}/libXmu.la
+%{_libdir}/libXmuu.la
 %{_includedir}/X11/Xmu/*.h
 %{_pkgconfigdir}/xm*.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libXm*.a
+%{_libdir}/libXmu.a
+%{_libdir}/libXmuu.a
