@@ -26,8 +26,8 @@ X Miscellaneous Utilities library.
 Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
 
 %package devel
-Summary:	Header files libXmu development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXmu
+Summary:	Header files for libXmu and libXmuu libraries
+Summary(pl):	Pliki nag³ówkowe bibliotek libXmu i libXmuu
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -38,13 +38,13 @@ Obsoletes:	libXmu-devel
 X Miscellaneous Utilities library.
 
 This package contains the header files needed to develop programs that
-use these libXmu.
+use libXmu or libXmuu.
 
 %description devel -l pl
 Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
 
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXmu.
+u¿ywaj±cych biblioteki libXmu lub libXmuu.
 
 %package static
 Summary:	Static libXmu libraries
