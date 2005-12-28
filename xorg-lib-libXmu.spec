@@ -5,8 +5,8 @@ Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	52c2950e5d0a137f9331af3ef3c377d0
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXmu-%{version}.tar.bz2
+# Source0-md5:	e34d2a7b66f07f864f6edddf7d329fcd
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
