@@ -1,5 +1,5 @@
 Summary:	X Miscellaneous Utilities library
-Summary(pl):	Biblioteka ró¿nych funkcji u¿ytkowych X
+Summary(pl.UTF-8):   Biblioteka rÃ³Å¼nych funkcji uÅ¼ytkowych X
 Name:		xorg-lib-libXmu
 Version:	1.0.3
 Release:	3
@@ -22,12 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Miscellaneous Utilities library.
 
-%description -l pl
-Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
+%description -l pl.UTF-8
+Biblioteka rÃ³Å¼nych funkcji uÅ¼ytkowych X (X Miscellaneous Utilities).
 
 %package devel
 Summary:	Header files for libXmu and libXmuu libraries
-Summary(pl):	Pliki nag³ówkowe bibliotek libXmu i libXmuu
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe bibliotek libXmu i libXmuu
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -40,15 +40,15 @@ X Miscellaneous Utilities library.
 This package contains the header files needed to develop programs that
 use libXmu or libXmuu.
 
-%description devel -l pl
-Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
+%description devel -l pl.UTF-8
+Biblioteka rÃ³Å¼nych funkcji uÅ¼ytkowych X (X Miscellaneous Utilities).
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXmu lub libXmuu.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXmu lub libXmuu.
 
 %package static
 Summary:	Static libXmu libraries
-Summary(pl):	Biblioteki statyczne libXmu
+Summary(pl.UTF-8):   Biblioteki statyczne libXmu
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXmu-static
@@ -58,10 +58,10 @@ X Miscellaneous Utilities library.
 
 This package contains the static libXmu library.
 
-%description static -l pl
-Biblioteka ró¿nych funkcji u¿ytkowych X (X Miscellaneous Utilities).
+%description static -l pl.UTF-8
+Biblioteka rÃ³Å¼nych funkcji uÅ¼ytkowych X (X Miscellaneous Utilities).
 
-Pakiet zawiera statyczn± bibliotekê libXmu.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXmu.
 
 %prep
 %setup -q -n libXmu-%{version}
