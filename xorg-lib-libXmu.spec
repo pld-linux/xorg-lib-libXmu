@@ -1,5 +1,5 @@
 Summary:	X Miscellaneous Utilities library
-Summary(pl.UTF-8):   Biblioteka różnych funkcji użytkowych X
+Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
 Version:	1.0.3
 Release:	3
@@ -27,7 +27,7 @@ Biblioteka różnych funkcji użytkowych X (X Miscellaneous Utilities).
 
 %package devel
 Summary:	Header files for libXmu and libXmuu libraries
-Summary(pl.UTF-8):   Pliki nagłówkowe bibliotek libXmu i libXmuu
+Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek libXmu i libXmuu
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -48,7 +48,7 @@ używających biblioteki libXmu lub libXmuu.
 
 %package static
 Summary:	Static libXmu libraries
-Summary(pl.UTF-8):   Biblioteki statyczne libXmu
+Summary(pl.UTF-8):	Biblioteki statyczne libXmu
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXmu-static
