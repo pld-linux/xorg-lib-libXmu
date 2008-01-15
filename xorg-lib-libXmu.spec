@@ -1,12 +1,12 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.0.3
-Release:	3
+Version:	1.0.4
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	b926b95b811ece3e19cd590db85ee615
+# Source0-md5:	fb372a5f3ab42b5ba16d7af4d833a0cb
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
