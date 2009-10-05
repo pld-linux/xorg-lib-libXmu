@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-lib-xtrans-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXmu
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -92,7 +92,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXmu.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXmu.so.6
 %attr(755,root,root) %{_libdir}/libXmuu.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXmuu.so.1
 
 %files devel
 %defattr(644,root,root,755)
@@ -102,7 +104,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXmuu.la
 %dir %{_includedir}/X11/Xmu
 %{_includedir}/X11/Xmu/*.h
-%{_pkgconfigdir}/xm*.pc
+%{_pkgconfigdir}/xmu.pc
+%{_pkgconfigdir}/xmuu.pc
 
 %files static
 %defattr(644,root,root,755)
