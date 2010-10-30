@@ -1,21 +1,23 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.0.5
-Release:	2
+Version:	1.1.0
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	fc4d66be7a1a1eb474954728415e46d6
+# Source0-md5:	6836883a0120e8346cf7f58dc42e465a
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xmlto >= 0.0.20
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-lib-xtrans-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-sgml-doctools >= 1.5
+BuildRequires:	xorg-util-util-macros >= 1.10
 Obsoletes:	libXmu
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,8 +81,7 @@ Pakiet zawiera statyczną bibliotekę libXmu.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -90,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README doc/*.{html,css}
 %attr(755,root,root) %{_libdir}/libXmu.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXmu.so.6
 %attr(755,root,root) %{_libdir}/libXmuu.so.*.*.*
