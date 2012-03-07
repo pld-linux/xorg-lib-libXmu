@@ -1,24 +1,26 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.1.0
-Release:	2
+Version:	1.1.1
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	6836883a0120e8346cf7f58dc42e465a
+# Source0-md5:	a4efff8de85bd45dd3da124285d10c00
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xmlto >= 0.0.20
+BuildRequires:	xmlto >= 0.0.22
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-lib-xtrans-devel
-BuildRequires:	xorg-sgml-doctools >= 1.5
-BuildRequires:	xorg-util-util-macros >= 1.10
+BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-sgml-doctools >= 1.8
+BuildRequires:	xorg-util-util-macros >= 1.12
 Obsoletes:	libXmu
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -100,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/*.{html,css}
+%doc doc/{Xmu.html,xlogo.svg}
 %attr(755,root,root) %{_libdir}/libXmu.so
 %attr(755,root,root) %{_libdir}/libXmuu.so
 %{_libdir}/libXmu.la
