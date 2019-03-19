@@ -1,13 +1,13 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.1.2
-Release:	2
+Version:	1.1.3
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	41d92ab627dfa06568076043f3e089e4
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.bz2
+# Source0-md5:	ac774cff8b493f566088a255dbf91201
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
@@ -86,6 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# (.html format) packaged as %doc
+%{__rm} $RPM_BUILD_ROOT%{_docdir}/libXmu/{Xmu.*,xlogo.svg}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -94,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXmu.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXmu.so.6
 %attr(755,root,root) %{_libdir}/libXmuu.so.*.*.*
