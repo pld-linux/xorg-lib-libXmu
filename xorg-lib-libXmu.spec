@@ -1,18 +1,19 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.1.3
+Version:	1.1.4
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.bz2
-# Source0-md5:	ac774cff8b493f566088a255dbf91201
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.xz
+# Source0-md5:	ed52d396115fbc4d05300762aab79685
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
@@ -21,7 +22,8 @@ BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-sgml-doctools >= 1.8
 BuildRequires:	xorg-util-util-macros >= 1.12
-Obsoletes:	libXmu
+BuildRequires:	xz
+Obsoletes:	libXmu < 6.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,7 +39,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXt-devel
-Obsoletes:	libXmu-devel
+Obsoletes:	libXmu-devel < 6.3
 
 %description devel
 X Miscellaneous Utilities library.
@@ -56,7 +58,7 @@ Summary:	Static libXmu libraries
 Summary(pl.UTF-8):	Biblioteki statyczne libXmu
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXmu-static
+Obsoletes:	libXmu-static < 6.3
 
 %description static
 X Miscellaneous Utilities library.
