@@ -1,28 +1,29 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.1.4
+Version:	1.2.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.xz
-# Source0-md5:	ed52d396115fbc4d05300762aab79685
+# Source0-md5:	7a8a1495dafe8696b0b05f57b55c70c3
 URL:		https://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.60
+BuildRequires:	autoconf >= 2.70
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-lib-libXt-devel
+BuildRequires:	xorg-lib-libXt-devel >= 1.1.0
 BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-sgml-doctools >= 1.8
 BuildRequires:	xorg-util-util-macros >= 1.12
 BuildRequires:	xz
+Requires:	xorg-lib-libXt >= 1.1.0
 Obsoletes:	libXmu < 6.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +39,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek libXmu i libXmuu
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
-Requires:	xorg-lib-libXt-devel
+Requires:	xorg-lib-libXt-devel >= 1.1.0
 Obsoletes:	libXmu-devel < 6.3
 
 %description devel
