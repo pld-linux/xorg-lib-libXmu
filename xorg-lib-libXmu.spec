@@ -1,13 +1,12 @@
 Summary:	X Miscellaneous Utilities library
 Summary(pl.UTF-8):	Biblioteka różnych funkcji użytkowych X
 Name:		xorg-lib-libXmu
-Version:	1.3.0
+Version:	1.3.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXmu-%{version}.tar.xz
-# Source0-md5:	532a37254137e9e1827b8eec95e79adf
-Patch0:		libXmu-32bit.patch
+# Source0-md5:	1ef8065f0284e76c2238770365012ab2
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.70
 BuildRequires:	automake
@@ -74,7 +73,6 @@ Pakiet zawiera statyczną bibliotekę libXmu.
 
 %prep
 %setup -q -n libXmu-%{version}
-%patch -P0 -p1
 
 %build
 %{__libtoolize}
