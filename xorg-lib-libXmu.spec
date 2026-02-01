@@ -89,6 +89,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXmu*.la
 # (.html format) packaged as %doc
 %{__rm} $RPM_BUILD_ROOT%{_docdir}/libXmu/{Xmu.*,xlogo.svg}
 
@@ -111,8 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/{Xmu.html,xlogo.svg}
 %{_libdir}/libXmu.so
 %{_libdir}/libXmuu.so
-%{_libdir}/libXmu.la
-%{_libdir}/libXmuu.la
 %dir %{_includedir}/X11/Xmu
 %{_includedir}/X11/Xmu/*.h
 %{_pkgconfigdir}/xmu.pc
